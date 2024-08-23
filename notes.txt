@@ -1,0 +1,8 @@
+implementing django rest-auth-token
+https://github.com/alamorre/django-rest-auth/blob/main/server/views.py
+
+implementing simple JWT
+https://osirusdjodji.medium.com/jwt-authentication-in-django-rest-framework-with-simple-jwt-a-comprehensive-guide-f2ba860f1365
+
+good repo to implement super users and login 
+https://github.com/dotja/authentication_app_react_django_rest/blob/main/backend/backend/settings.py

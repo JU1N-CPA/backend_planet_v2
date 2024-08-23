@@ -1,0 +1,29 @@
+---
+kind: pipeline
+type: exec
+name: default
+
+platform:
+  os: linux
+  arch: amd64
+
+steps:
+- name: install-dependencies
+  environment:
+  commands:
+    - python3 -m pip install virtualenv
+    - python3 -m virtualenv -p python3 venv
+    - . venv/bin/activate
+    - which python
+    - pip install -r dev-requirements.txt -r requirements.txt
+    - flake8
+    - isort --profile=black . --check
+    - black -l 88 --preview . --check
+
+- name: build
+  commands:
+    - which python
+
+trigger:
+  branch:
+  - main
